@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajouter une candidature</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une candidature</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Augmentez la largeur selon vos préférences, par exemple, 60% */
+    text-align: center;
+    max-width: 600px; /* Ajout d'une largeur maximale pour éviter une trop grande expansion sur des écrans larges */
+    margin: auto; /* Pour centrer le conteneur horizontalement */
+}
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ajouter une candidature</h2>
+       <form method="post" action="/Appels-offres/rest/admin/submit" enctype="application/json">
+            <label for="soumissionnaire">Soumissionnaire:</label>
+            <select id="soumissionnaire" name="soumissionnaire" required>
+                <!-- Inclure la liste des utilisateurs existants ici -->
+                <option value="utilisateur1">Utilisateur 1</option>
+                <option value="utilisateur2">Utilisateur 2</option>
+                <!-- Ajoutez d'autres options au besoin -->
+            </select>
+
+            
+            <label for="nomProjet">Nom du projet:</label>
+            <input type="text" id="nomProjet" name="nomProjet" required>
+
+            <label for="client">Client:</label>
+            <input type="text" id="client" name="client" required>
+
+            <label for="montantProjet">Montant du projet:</label>
+            <input type="number" id="montantProjet" name="montantProjet" step="0.01" required>
+
+            <label for="dateRealisation">Date de réalisation:</label>
+            <input type="date" id="dateRealisation" name="dateRealisation" required>
+
+            <input type="submit" value="Ajouter candidature">
+        </form>
+    </div>
+</body>
+</html>

@@ -15,5 +15,10 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/eclipse-workspace2/Jersey1/src/main/webapp/WEB-INF/lib/jakarta.validation-api-3.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/eclipse-workspace2/Jersey1/src/main/webapp/WEB-INF/lib/jakarta.ws.rs-api-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/soft2/apache-tomcat-10.0.27/lib/servlet-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/5.0/apidocs/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
